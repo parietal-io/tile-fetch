@@ -43,7 +43,7 @@ def get_config():
     cfg.style = "pep440"
     cfg.tag_prefix = ""
     cfg.parentdir_prefix = ""
-    cfg.versionfile_source = "rbush/_version.py"
+    cfg.versionfile_source = "tile_fetch/_version.py"
     cfg.verbose = False
     return cfg
 
