@@ -1,0 +1,21 @@
+package:
+  name: tile_fetch
+  version: 0.0.1
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  requires:
+    - pytest >=2.8.5
+  imports:
+    - tile_fetch
+
+about:
+  home: https://github.com/parietal-io/tile_fetch
+  license: New BSD

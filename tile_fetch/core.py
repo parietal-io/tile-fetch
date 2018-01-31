@@ -161,7 +161,7 @@ def render_template(template, x, y, z):
 
 def get_tile(lng, lat, level=8,
              template='https://c.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png'):
-    x, y = lng_lat_to_tile(xmin, ymax, level)
+    x, y = lng_lat_to_tile(lng, lat, level)
     return render_template(template, x, y, level)
 
 
@@ -174,7 +174,7 @@ def get_tiles_by_extent(xmin, ymin, xmax, ymax, level=8,
     txmin, tymin = lng_lat_to_tile(xmin, ymax, level)
 
     # lower-right tile
-    tmax, tymax = lng_lat_to_tile(xmax, ymin, level)
+    txmax, tymax = lng_lat_to_tile(xmax, ymin, level)
 
     for y in range(tymax, tymin - 1, -1):
         for x in range(txmin, txmax + 1, 1):
